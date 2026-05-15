@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — YATL</title>
+<meta name="description" content="Get help with YATL — Yet Another Todo List.">
+<style>
+  :root {
+    --forest: #2A5C3F;
+    --gold:   #C8A84B;
+    --parch:  #F8F5E9;
+    --ink:    #1C1C10;
+    --muted:  #6A7A50;
+    --border: #D4C68A60;
+    --mono:   'Courier New', Courier, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--parch); color: var(--ink); font-family: var(--mono); }
+
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: var(--parch);
+    z-index: 10;
+  }
+  .nav-logo { color: var(--forest); font-size: 1.1rem; font-weight: bold; letter-spacing: 0.1em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--forest); }
+
+  .page { max-width: 680px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .page-eyebrow { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1rem; }
+  .page h1 { color: var(--forest); font-size: 2rem; font-weight: normal; margin-bottom: 1rem; }
+  .page-intro { color: var(--muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 3rem; }
+
+  .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+  .contact-card { border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+  .contact-card h3 { color: var(--forest); font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem; font-weight: normal; }
+  .contact-card p { color: var(--muted); font-size: 0.8rem; line-height: 1.7; margin-bottom: 1rem; }
+  .contact-card a { color: var(--forest); font-size: 0.8rem; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
+
+  .faq-label { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 2rem; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 1.5rem 0; }
+  .faq-item h3 { color: var(--ink); font-size: 0.9rem; font-weight: normal; margin-bottom: 0.75rem; }
+  .faq-item p { color: var(--muted); font-size: 0.8rem; line-height: 1.8; }
+  .faq-item code { background: #E8E2C8; padding: 1px 5px; border-radius: 2px; font-family: var(--mono); font-size: 0.8rem; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+  }
+  footer a { color: var(--muted); text-decoration: none; font-size: 0.8rem; margin: 0 1rem; }
+  footer a:hover { color: var(--forest); }
+  .footer-copy { color: var(--border); font-size: 0.7rem; margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/Yatl/">YATL</a>
+  <div class="nav-links">
+    <a href="/Yatl/marketing">about</a>
+    <a href="/Yatl/support" style="color:var(--forest)">support</a>
+    <a href="/Yatl/privacy">privacy</a>
+  </div>
+</nav>
+
+<section class="page">
+  <div class="page-eyebrow">SUPPORT</div>
+  <h1>We're here to help.</h1>
+  <p class="page-intro">Got a question, found a bug, or have a feature idea? Reach out — we read everything and respond within 48 hours.</p>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <h3>email support</h3>
+      <p>For account issues, subscription questions, or anything private.</p>
+      <a href="mailto:artizany@proton.me">artizany@proton.me</a>
+    </div>
+    <div class="contact-card">
+      <h3>bug reports &amp; ideas</h3>
+      <p>Open an issue on GitHub. Public, trackable, and we can keep you updated on fixes.</p>
+      <a href="https://github.com/artizani/Yatl/issues" target="_blank">github.com/artizani/Yatl/issues</a>
+    </div>
+  </div>
+
+  <div class="faq-label">COMMON QUESTIONS</div>
+
+  <div class="faq-item">
+    <h3>My tasks disappeared after midnight — is that a bug?</h3>
+    <p>No, that's by design. YATL resets every morning to keep you focused on today only. Your completed tasks are archived as a <code>.txt</code> file you can download from the morning reset screen.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>The microphone isn't working. What do I do?</h3>
+    <p>Go to iPhone Settings → Privacy & Security → Microphone → make sure YATL is switched on. Also check Speech Recognition is enabled the same way. Both are required for voice input.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How do I cancel my subscription?</h3>
+    <p>Go to iPhone Settings → Your Name → Subscriptions → YATL → Cancel Subscription. YATL doesn't manage billing directly — it's all handled through Apple so you have full control.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>I subscribed but Pro features aren't unlocking.</h3>
+    <p>Open YATL → Settings → Restore Purchases. This syncs your subscription status with Apple. If it still doesn't work, email us at artizany@proton.me with your Apple ID and we'll sort it out.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Is my voice data private?</h3>
+    <p>Yes. YATL uses on-device speech recognition with <code>requiresOnDeviceRecognition</code> enabled. Your voice never leaves your phone. The AI that organises your tasks also runs entirely on-device using Apple's Foundation Models.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I get a refund?</h3>
+    <p>Refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> and sign in with your Apple ID to request one.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>The app blocking feature isn't available — why?</h3>
+    <p>Focus Lock (app blocking) requires Screen Time permission, which you can grant the first time you tap the feature in the Focus tab. If you don't see the option, make sure you're on YATL Pro.</p>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="/Yatl/">home</a>
+    <a href="/Yatl/marketing">about</a>
+    <a href="/Yatl/privacy">privacy</a>
+    <a href="https://github.com/artizani/Yatl/issues">github</a>
+  </div>
+  <div class="footer-copy">© 2026 YATL · artizany@proton.me</div>
+</footer>
+
+</body>
+</html>

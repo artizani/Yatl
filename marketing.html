@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — YATL</title>
+<meta name="description" content="The story and mission behind YATL — Yet Another Todo List.">
+<style>
+  :root {
+    --forest: #2A5C3F;
+    --gold:   #C8A84B;
+    --parch:  #F8F5E9;
+    --ink:    #1C1C10;
+    --muted:  #6A7A50;
+    --border: #D4C68A60;
+    --mono:   'Courier New', Courier, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--parch); color: var(--ink); font-family: var(--mono); }
+
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: var(--parch);
+    z-index: 10;
+  }
+  .nav-logo { color: var(--forest); font-size: 1.1rem; font-weight: bold; letter-spacing: 0.1em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--forest); }
+
+  .hero {
+    background: var(--forest);
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .hero-eyebrow { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem; }
+  .hero h1 { color: var(--parch); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: normal; line-height: 1.3; max-width: 600px; margin: 0 auto 1.5rem; }
+  .hero p { color: #7BAF8E; font-size: 0.9rem; line-height: 1.8; max-width: 520px; margin: 0 auto; }
+
+  .page { max-width: 680px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+
+  .story { margin-bottom: 4rem; }
+  .story-label { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem; }
+  .story p { color: var(--muted); font-size: 0.9rem; line-height: 1.9; margin-bottom: 1.25rem; }
+  .story p strong { color: var(--ink); font-weight: normal; }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+  .stat { text-align: center; }
+  .stat-number { color: var(--forest); font-size: 2rem; display: block; margin-bottom: 0.25rem; }
+  .stat-label { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.05em; }
+
+  .divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.4; margin: 3rem 0; }
+
+  .press-label { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem; }
+  .press-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+  .press-card { border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+  .press-card h3 { color: var(--forest); font-size: 0.85rem; font-weight: normal; margin-bottom: 0.75rem; }
+  .press-card p { color: var(--muted); font-size: 0.8rem; line-height: 1.7; }
+  .press-download { display: inline-block; margin-top: 2rem; color: var(--forest); font-size: 0.85rem; text-decoration: none; border: 1px solid var(--forest); padding: 0.6rem 1.25rem; border-radius: 4px; transition: all 0.2s; }
+  .press-download:hover { background: var(--forest); color: var(--gold); }
+
+  .founder { border-top: 1px solid var(--border); padding-top: 3rem; margin-top: 3rem; }
+  .founder-label { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem; }
+  .founder-name { color: var(--forest); font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: normal; }
+  .founder-bio { color: var(--muted); font-size: 0.85rem; line-height: 1.8; max-width: 540px; }
+  .founder-contact { margin-top: 1rem; }
+  .founder-contact a { color: var(--forest); font-size: 0.8rem; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+  }
+  footer a { color: var(--muted); text-decoration: none; font-size: 0.8rem; margin: 0 1rem; }
+  footer a:hover { color: var(--forest); }
+  .footer-copy { color: var(--border); font-size: 0.7rem; margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/Yatl/">YATL</a>
+  <div class="nav-links">
+    <a href="/Yatl/marketing" style="color:var(--forest)">about</a>
+    <a href="/Yatl/support">support</a>
+    <a href="/Yatl/privacy">privacy</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">YET ANOTHER TODO LIST</div>
+  <h1>"Your todo list is not the problem. Your relationship with it is."</h1>
+  <p>YATL was built on a simple belief: the best productivity system is one you actually use. Every day. Without guilt.</p>
+</div>
+
+<section class="page">
+
+  <div class="story">
+    <div class="story-label">THE STORY</div>
+    <p>Most todo apps are built for <strong>capture</strong>. They're excellent at helping you collect tasks, organise them into projects, assign priorities, set due dates, and build an ever-growing backlog of things you haven't done yet.</p>
+    <p>The problem is the backlog. It grows. It follows you. Every morning you open the app and see yesterday's guilt waiting for you. The system that was supposed to reduce stress becomes the source of it.</p>
+    <p>YATL is built for <strong>execution</strong>. You speak your day, it structures your thoughts, you work through them one at a time, and at midnight everything resets. Completed tasks are archived quietly. Unfinished ones disappear. Tomorrow starts clean.</p>
+    <p>It's not for everyone. But for the people it's for, nothing else works quite like it.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-number">0</span><span class="stat-label">servers storing your data</span></div>
+    <div class="stat"><span class="stat-number">1</span><span class="stat-label">task at a time</span></div>
+    <div class="stat"><span class="stat-number">24h</span><span class="stat-label">maximum backlog age</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="press-label">PRESS KIT</div>
+  <div class="press-grid">
+    <div class="press-card">
+      <h3>App description (short)</h3>
+      <p>YATL is a daily execution app for iPhone. Speak your thoughts, get a structured task list, focus one task at a time, reset at midnight.</p>
+    </div>
+    <div class="press-card">
+      <h3>App description (long)</h3>
+      <p>YATL (Yet Another Todo List) is a focus and daily execution app that replaces the anxiety of a growing backlog with the simplicity of a single focused day. Voice input powered by on-device AI organises your brain dump into a prioritised task list. A focus timer keeps you on track. Zen mode removes all distractions. Everything resets at midnight.</p>
+    </div>
+    <div class="press-card">
+      <h3>Key facts</h3>
+      <p>Platform: iOS 17+ · Price: Free with Pro at $14.99/year · No account required · No data collected · On-device AI and speech recognition · Daily reset at midnight</p>
+    </div>
+    <div class="press-card">
+      <h3>Press contact</h3>
+      <p>For review copies, interviews, or press enquiries contact artizany@proton.me. We respond to press within 24 hours.</p>
+    </div>
+  </div>
+
+  <a class="press-download" href="mailto:artizany@proton.me?subject=YATL Press Kit Request">↓ Request press assets</a>
+
+  <div class="founder">
+    <div class="founder-label">MADE BY</div>
+    <div class="founder-name">Olu-Femi Salami</div>
+    <p class="founder-bio">Independent developer building tools for focused work. YATL is built in Swift using Apple's on-device Foundation Models and SFSpeechRecognizer — everything runs privately on your device.</p>
+    <div class="founder-contact">
+      <a href="https://github.com/artizani">github.com/artizani</a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div>
+    <a href="/Yatl/">home</a>
+    <a href="/Yatl/support">support</a>
+    <a href="/Yatl/privacy">privacy</a>
+    <a href="https://github.com/artizani/Yatl/issues">github</a>
+  </div>
+  <div class="footer-copy">© 2026 YATL · Made with focus in mind</div>
+</footer>
+
+</body>
+</html>
